@@ -9,7 +9,6 @@ namespace APCSA3
         int Id { get; set; }
         string Doador { get; set; }
         string Beneficiario { get; set; }
-        string Destino { get; set; }
         DateTime DataDoacao { get; set; }
     }
 }

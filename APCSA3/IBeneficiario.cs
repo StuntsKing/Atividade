@@ -12,7 +12,6 @@ namespace APCSA3
         string Endereco { get; set; }
         float Renda { get; set; }
         int QtdPessoasFamiia { get; set; }
-        int NivelNecessidade { get; set; } //Nível de necessidade do beneficiário, de 1 à 10.
         int QtdDoacoesRecebidas { get; set; }
     }
 }
