@@ -13,14 +13,12 @@ namespace APCSA3
         public float ValorDoado { get; set; }
         public int QtdDoacoesFeitas { get; set; }
 
-        public DoadorMensalista(float ValorContribuicaoMensal, int Id, string Nome, string Cpf, float ValorDoado, int QtdDoacoesFeitas)
+        public DoadorMensalista(Pessoa p, float ValorContribuicaoMensal)
         {
+            p.Id = Id;
+            p.Nome = Nome;
+            p.Cpf = Cpf;
             this.ValorContribuicaoMensal = ValorContribuicaoMensal;
-            this.Id = Id;
-            this.Nome = Nome;
-            this.Cpf = Cpf;
-            this.ValorDoado = ValorDoado;
-            this.QtdDoacoesFeitas = QtdDoacoesFeitas;
         }
     }
 }

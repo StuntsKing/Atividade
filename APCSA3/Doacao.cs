@@ -9,13 +9,15 @@ namespace APCSA3
         public int Id { get; set; }
         public string Doador { get; set; }
         public string Beneficiario { get; set; }
+        public string Item { get; set; }
         public DateTime DataDoacao { get; set; }
 
-        public Doacao(int Id, string Doador, string Beneficiario, DateTime DataDoacao)
+        public Doacao(int Id, Doador d, Beneficiario b, ItemDoacao i, DateTime DataDoacao)
         {
             this.Id = Id;
-            this.Doador = Doador;
-            this.Beneficiario = Beneficiario;
+            d.Nome = Doador;
+            b.Nome = Beneficiario;
+            i.Nome = Item;
             this.DataDoacao = DataDoacao;
         }
     }

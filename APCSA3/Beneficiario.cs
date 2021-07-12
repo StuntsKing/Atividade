@@ -14,7 +14,7 @@ namespace APCSA3
         public int QtdPessoasFamiia { get; set; }
         public int QtdDoacoesRecebidas { get; set; }
 
-        public Beneficiario(Pessoa p, string Endereco, float Renda, int QtdPessoasFamilia, int QtdDoacoesRecebidas)
+        public Beneficiario(Pessoa p, string Endereco, float Renda, int QtdPessoasFamilia)
         {
             p.Id = Id;
             p.Nome = Nome;
@@ -22,7 +22,6 @@ namespace APCSA3
             this.Endereco = Endereco;
             this.Renda = Renda;
             this.QtdPessoasFamiia = QtdPessoasFamiia;
-            this.QtdDoacoesRecebidas = QtdDoacoesRecebidas;
         }
     }
 }
