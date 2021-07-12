@@ -14,11 +14,11 @@ namespace APCSA3
         public int QtdPessoasFamiia { get; set; }
         public int QtdDoacoesRecebidas { get; set; }
 
-        public Beneficiario(int Id, string Nome, string Cpf, string Endereco, float Renda, int QtdPessoasFamilia, int QtdDoacoesRecebidas)
+        public Beneficiario(Pessoa p, string Endereco, float Renda, int QtdPessoasFamilia, int QtdDoacoesRecebidas)
         {
-            this.Id = Id;
-            this.Nome = Nome;
-            this.Cpf = Cpf;
+            p.Id = Id;
+            p.Nome = Nome;
+            p.Cpf = Cpf;
             this.Endereco = Endereco;
             this.Renda = Renda;
             this.QtdPessoasFamiia = QtdPessoasFamiia;

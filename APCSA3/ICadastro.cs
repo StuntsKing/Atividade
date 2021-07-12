@@ -6,8 +6,8 @@ namespace APCSA3
 {
     interface ICadastro
     {
-        void CadastrarDoador();
-        void CadastrarBeneficiario();
+        void CadastrarDoador(Pessoa p);
+        void CadastrarBeneficiario(Pessoa p, string Endereco, float Renda, int QtdPessoasFamilia, int QtdDoacoesRecebidas);
         void CadastrarDoacao();
         void MostrarDoadores();
         void MostrarReceptores();
