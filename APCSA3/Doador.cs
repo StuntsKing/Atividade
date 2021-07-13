@@ -14,9 +14,9 @@ namespace APCSA3
 
         public Doador(Pessoa p)
         {
-            p.Id = Id;
-            p.Nome = Nome;
-            p.Cpf = Cpf;
+            Id = p.Id;
+            Nome = p.Nome;
+            Cpf = p.Cpf;
         }
     }
 }

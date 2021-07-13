@@ -11,17 +11,17 @@ namespace APCSA3
         public string Cpf { get; set; }
         public string Endereco { get; set; }
         public float Renda { get; set; }
-        public int QtdPessoasFamiia { get; set; }
+        public int QtdPessoasFamilia { get; set; }
         public int QtdDoacoesRecebidas { get; set; }
 
         public Beneficiario(Pessoa p, string Endereco, float Renda, int QtdPessoasFamilia)
         {
-            p.Id = Id;
-            p.Nome = Nome;
-            p.Cpf = Cpf;
+            Id = p.Id;
+            Nome = p.Nome;
+            Cpf = p.Cpf;
             this.Endereco = Endereco;
             this.Renda = Renda;
-            this.QtdPessoasFamiia = QtdPessoasFamiia;
+            this.QtdPessoasFamilia = QtdPessoasFamilia;
         }
     }
 }

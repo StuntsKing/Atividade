@@ -33,24 +33,24 @@ namespace APCSA3
 
         public void MostrarDoadores()
         {
-            foreach(Doador item in doadores)
+            Console.WriteLine("Doadores");
+            Console.WriteLine("-----------------------------");
+            foreach (Doador item in doadores)
             {
-                Console.WriteLine("Doadores");
-                Console.WriteLine("-----------------------------");
                 Console.WriteLine($"Id: {item.Id} - Nome: {item.Nome} - CPF: {item.Cpf} - Valor doado: {item.ValorDoado} - Quantidade de doacões feitas: {item.QtdDoacoesFeitas}.");
-                Console.WriteLine("-----------------------------");
             }
+            Console.WriteLine("-----------------------------");
         }
 
         public void MostrarReceptores()
         {
-            foreach(Beneficiario item in beneficiarios)
+            Console.WriteLine("Beneficiários");
+            Console.WriteLine("-----------------------------");
+            foreach (Beneficiario item in beneficiarios)
             {
-                Console.WriteLine("Beneficiários");
-                Console.WriteLine("-----------------------------");
-                Console.WriteLine($"Id: {item.Id} - Nome: {item.Nome} - CPF: {item.Cpf} - Endereço: {item.Endereco} - Renda: {item.Renda} - Quantidade de pessoas na família: {item.QtdPessoasFamiia} - Quantidade de doações recebidas: {item.QtdDoacoesRecebidas}.");
-                Console.WriteLine("-----------------------------");
+                Console.WriteLine($"Id: {item.Id} - Nome: {item.Nome} - CPF: {item.Cpf} - Endereço: {item.Endereco} - Renda: {item.Renda} - Quantidade de pessoas na família: {item.QtdPessoasFamilia} - Quantidade de doações recebidas: {item.QtdDoacoesRecebidas}.");
             }
+            Console.WriteLine("-----------------------------");
         }
 
         public void MostrarDoacoesData(DateTime Data)
@@ -69,13 +69,13 @@ namespace APCSA3
 
         public void MostrarDoacoesTotais()
         {
-            foreach(Doacao item in doacoes)
+            Console.WriteLine("Doações");
+            Console.WriteLine("-----------------------------");
+            foreach (Doacao item in doacoes)
             {
-                Console.WriteLine("Doações");
-                Console.WriteLine("-----------------------------");
                 Console.WriteLine($"Doador: {item.Doador} - Beneficiário: {item.Beneficiario} - Item doado: {item.Item} - Data: {item.DataDoacao}");
-                Console.WriteLine("-----------------------------");
             }
+            Console.WriteLine("-----------------------------");
         }
     }
 }

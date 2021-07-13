@@ -11,7 +11,7 @@ namespace APCSA3
         string Cpf { get; set; }
         string Endereco { get; set; }
         float Renda { get; set; }
-        int QtdPessoasFamiia { get; set; }
+        int QtdPessoasFamilia { get; set; }
         int QtdDoacoesRecebidas { get; set; }
     }
 }

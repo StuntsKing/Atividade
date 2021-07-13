@@ -10,6 +10,6 @@ namespace APCSA3
         string Nome { get; set; }
         float Valor { get; set; }
         string GeneroDestinado { get; set; } //O item será classificado, de acordo com sua destinação: masculino, feminino ou ambos.
-        string Tamanho { get; set; } //Caso for roupa: P, M, G... Caso for alimento: 1Kg; 1L...
+        string Tamanho { get; set; } //Caso for roupa: P, M, G, GG. Caso for cesta básica: Pequena, Média ou Grande.
     }
 }

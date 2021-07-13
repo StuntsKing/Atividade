@@ -15,9 +15,9 @@ namespace APCSA3
         public Doacao(int Id, Doador d, Beneficiario b, ItemDoacao i, DateTime DataDoacao)
         {
             this.Id = Id;
-            d.Nome = Doador;
-            b.Nome = Beneficiario;
-            i.Nome = Item;
+            Doador = d.Nome;
+            Beneficiario = b.Nome;
+            Item = i.Nome;
             this.DataDoacao = DataDoacao;
         }
     }
