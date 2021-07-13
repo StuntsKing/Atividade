@@ -12,6 +12,5 @@ namespace APCSA3
         string Endereco { get; set; }
         float Renda { get; set; }
         int QtdPessoasFamilia { get; set; }
-        int QtdDoacoesRecebidas { get; set; }
     }
 }

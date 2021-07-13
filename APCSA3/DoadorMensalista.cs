@@ -10,14 +10,12 @@ namespace APCSA3
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Cpf { get; set; }
-        public float ValorDoado { get; set; }
-        public int QtdDoacoesFeitas { get; set; }
 
         public DoadorMensalista(Pessoa p, float ValorContribuicaoMensal)
         {
-            p.Id = Id;
-            p.Nome = Nome;
-            p.Cpf = Cpf;
+            Id = p.Id;
+            Nome = p.Nome;
+            Cpf = p.Cpf;
             this.ValorContribuicaoMensal = ValorContribuicaoMensal;
         }
     }

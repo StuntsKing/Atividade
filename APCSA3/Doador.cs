@@ -9,8 +9,6 @@ namespace APCSA3
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Cpf { get; set; }
-        public float ValorDoado { get; set; }
-        public int QtdDoacoesFeitas { get; set; }
 
         public Doador(Pessoa p)
         {

@@ -9,7 +9,5 @@ namespace APCSA3
         int Id { get; set; }
         string Nome { get; set; }
         string Cpf { get; set; }
-        float ValorDoado { get; set; }
-        int QtdDoacoesFeitas { get; set; }
     }
 }

@@ -7,6 +7,7 @@ namespace APCSA3
     class Cadastro: ICadastro
     {
         List<Doador> doadores = new List<Doador>();
+        List<DoadorMensalista> mensalistas = new List<DoadorMensalista>();
         List<Beneficiario> beneficiarios = new List<Beneficiario>();
         List<Doacao> doacoes = new List<Doacao>();
 
@@ -16,9 +17,30 @@ namespace APCSA3
             doadores.Add(d);
         }
 
+        public void CadastrarDoador(Doador d)
+        {
+            doadores.Add(d);
+        }
+
+        public void CadastrarDoadorMensalista(Pessoa p, float ValorContribuicaoMensal)
+        {
+            DoadorMensalista d = new DoadorMensalista(p, ValorContribuicaoMensal);
+            mensalistas.Add(d);
+        }
+
+        public void CadastrarDoadorMensalista(DoadorMensalista d)
+        {
+            mensalistas.Add(d);
+        }
+
         public void CadastrarBeneficiario(Pessoa p, string Endereco, float Renda, int QtdPessoasFamilia)
         {
             Beneficiario b = new Beneficiario(p, Endereco, Renda, QtdPessoasFamilia);
+            beneficiarios.Add(b);
+        }
+
+        public void CadastrarBeneficiario(Beneficiario b)
+        {
             beneficiarios.Add(b);
         }
 
@@ -26,9 +48,6 @@ namespace APCSA3
         {
             Doacao d = new Doacao(Id, x, b, i, DataDoacao);
             doacoes.Add(d);
-            x.QtdDoacoesFeitas++;
-            x.ValorDoado = x.ValorDoado + i.Valor;
-            b.QtdDoacoesRecebidas++;
         }
 
         public void MostrarDoadores()
@@ -37,7 +56,18 @@ namespace APCSA3
             Console.WriteLine("-----------------------------");
             foreach (Doador item in doadores)
             {
-                Console.WriteLine($"Id: {item.Id} - Nome: {item.Nome} - CPF: {item.Cpf} - Valor doado: {item.ValorDoado} - Quantidade de doacões feitas: {item.QtdDoacoesFeitas}.");
+                Console.WriteLine($"Id: {item.Id} - Nome: {item.Nome} - CPF: {item.Cpf}.");
+            }
+            Console.WriteLine("-----------------------------");
+        }
+
+        public void MostrarDoadoresMensalistas()
+        {
+            Console.WriteLine("Doadores Mensalistas");
+            Console.WriteLine("-----------------------------");
+            foreach (DoadorMensalista item in mensalistas)
+            {
+                Console.WriteLine($"Id: {item.Id} - Nome: {item.Nome} - CPF: {item.Cpf} - Valor de Contribuição Mensal: {item.ValorContribuicaoMensal}.");
             }
             Console.WriteLine("-----------------------------");
         }
@@ -48,7 +78,7 @@ namespace APCSA3
             Console.WriteLine("-----------------------------");
             foreach (Beneficiario item in beneficiarios)
             {
-                Console.WriteLine($"Id: {item.Id} - Nome: {item.Nome} - CPF: {item.Cpf} - Endereço: {item.Endereco} - Renda: {item.Renda} - Quantidade de pessoas na família: {item.QtdPessoasFamilia} - Quantidade de doações recebidas: {item.QtdDoacoesRecebidas}.");
+                Console.WriteLine($"Id: {item.Id} - Nome: {item.Nome} - CPF: {item.Cpf} - Endereço: {item.Endereco} - Renda: {item.Renda} - Quantidade de pessoas na família: {item.QtdPessoasFamilia}.");
             }
             Console.WriteLine("-----------------------------");
         }

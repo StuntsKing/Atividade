@@ -12,7 +12,6 @@ namespace APCSA3
         public string Endereco { get; set; }
         public float Renda { get; set; }
         public int QtdPessoasFamilia { get; set; }
-        public int QtdDoacoesRecebidas { get; set; }
 
         public Beneficiario(Pessoa p, string Endereco, float Renda, int QtdPessoasFamilia)
         {
